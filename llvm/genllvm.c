@@ -1597,6 +1597,7 @@ static llElement resizeSmallInteger(llElement element, uint32 newWidth,
   char *operation;
   if (newWidth < oldWidth) {
     operation = "trunc";
+    //TODO if constant throw error if truncation looses info.
   } else {
     deDatatypeType type = deDatatypeGetType(oldDatatype);
     if (type == DE_TYPE_INT) {
